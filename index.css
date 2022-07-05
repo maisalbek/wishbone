@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 html {
   background-color: #e5e5e5;
+  font-family: "Poppins", sans-serif;
 }
 body {
   width: "100%";
@@ -10,6 +11,27 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
+}
+button {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.4px;
+  border-radius: 14px;
+  width: 155px;
+  height: 46px;
+}
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 /* -----------------------------------NAVBAR----------------------------------------- */
 .navbar {
@@ -23,26 +45,31 @@ body {
 .logo-container {
   margin-left: 152px;
   cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+.navbar-btns-container {
+  margin-right: 140px;
 }
 .logo {
   color: #000000;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
 }
 .logo-bold {
   color: #000000;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
 }
 .navbar-btns {
-  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
   color: #000000;
   text-decoration: none;
-  margin-right: 31px;
+  margin-right: 29px;
 }
 .navbar-btn {
   background: #000000;
@@ -50,14 +77,12 @@ body {
   width: 155px;
   height: 46px;
   color: #ffffff;
-  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.4px;
-  margin-right: 140px;
   border: none;
 }
 .navbar-btn:hover {
@@ -66,23 +91,69 @@ body {
   color: #000000;
   cursor: pointer;
 }
+.burger-menu {
+  width: 30px;
+  margin-right: 50px;
+  display: none;
+}
+@media all and (max-width: 1200px) {
+  .logo-container {
+    margin-left: 100px;
+  }
+  .navbar-btns-container {
+    margin-right: 100px;
+  }
+}
+@media all and (max-width: 1100px) {
+  .logo-container {
+    margin-left: 50px;
+  }
+  .navbar-btns-container {
+    margin-right: 50px;
+  }
+}
+@media all and (max-width: 992px) {
+  .navbar-btns-container {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+}
+@media all and (max-width: 425px) {
+  .logo-container {
+    margin-left: 25px;
+  }
+  .burger-menu {
+    margin-right: 25px;
+    width: 25px;
+  }
+  .logo {
+    font-size: 18px;
+  }
+  .logo-bold {
+    font-size: 18px;
+  }
+}
 /* -------------------------------------------------SECTION1-------------------------------------- */
 .section1 {
-  width: 1440px;
   display: flex;
-}
-.section1 > .rightside {
-  width: 50%;
-  background-color: #ece7e4;
+  align-items: flex-start;
+  width: 1440px;
   height: 720px;
 }
-.section1 > .rightside > .innercontainer {
+.section1-leftside {
+  width: 50%;
+  background-color: #ece7e4;
+  height: auto;
+}
+.section1-innercontainer {
   display: flex;
   flex-direction: column;
   margin: 77px 60px;
   padding: 60px 40px;
 }
-.section1 > .rightside > .innercontainer > .logo {
+.section1-innercontainer > .logo {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -91,8 +162,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.section1 > .rightside > .innercontainer > .bold-text {
-  font-family: "Poppins", sans-serif;
+.section1-innercontainer > .bold-text {
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
@@ -100,8 +170,7 @@ body {
   color: #000000;
   margin-bottom: 18px;
 }
-.section1 > .rightside > .innercontainer > .description-text {
-  font-family: "Poppins";
+.section1-innercontainer > .description-text {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -110,63 +179,187 @@ body {
   margin-bottom: 30px;
 }
 .section1-btn {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  letter-spacing: 0.4px;
   color: #000000;
-  border-radius: 14px;
   border: 1px solid #000000;
-  width: 155px;
-  height: 46px;
+  margin-left: 4px;
 }
 .section1-btn:hover {
   background-color: #000000;
   color: #ffffff;
 }
-.section1 > .leftside {
-  width: 720px;
-  height: 720px;
+.section1-rightside {
+  width: 50%;
+  height: auto;
+}
+@media all and (max-width: 1200px) {
+  .section1 {
+    height: 600px;
+  }
+  .section1-innercontainer {
+    margin: 40px 60px;
+    padding: 40px 40px;
+  }
+  .section1-innercontainer > .bold-text {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .section1 {
+    height: 512px;
+  }
+  .section1-innercontainer {
+    margin: 10px 25px;
+    padding: 30px 25px;
+  }
+  .section1-innercontainer > .bold-text {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media all and (max-width: 992px) {
+  .section1 {
+    height: 496px;
+  }
+  .section1-innercontainer {
+    margin: 10px 25px;
+    padding: 40px 25px;
+  }
+  .section1-innercontainer > .logo {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .section1-innercontainer > .bold-text {
+    font-size: 40px;
+    line-height: 50px;
+    color: #000000;
+    margin-bottom: 18px;
+  }
+  .section1-innercontainer > .description-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 30px;
+  }
+}
+@media all and (max-width: 768px) {
+  .section1 {
+    height: 384px;
+  }
+  .section1-innercontainer {
+    margin: 10px 25px;
+    padding: 10px 25px;
+  }
+  .section1-innercontainer > .logo {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  .section1-innercontainer > .bold-text {
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+    margin-bottom: 8px;
+  }
+  .section1-innercontainer > .description-text {
+    font-size: 12px;
+    line-height: 22px;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+}
+@media all and (max-width: 576px) {
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .section1-rightside {
+    display: none;
+  }
+  .section1-leftside {
+    width: 100%;
+  }
+  .section1-innercontainer {
+    margin: 20px 25px;
+    padding: 10px 25px;
+  }
+  .section1-innercontainer > .logo {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .section1-innercontainer > .bold-text {
+    font-size: 40px;
+    line-height: 55px;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  .section1-innercontainer > .description-text {
+    font-size: 14px;
+    line-height: 28px;
+    color: #000000;
+    margin-bottom: 25px;
+  }
+}
+@media all and (max-width: 425px) {
+  .section1 {
+    height: 480px;
+  }
+  .section1-innercontainer {
+    margin: 20px 12px;
+    padding: 10px 13px;
+  }
+}
+@media all and (max-width: 375px) {
+  .section1 {
+    height: 750px;
+  }
+  .section1-leftside {
+    height: 750px;
+  }
+}
+@media all and (max-width: 320px) {
+  .section1 {
+    height: 550px;
+  }
+  .section1-innercontainer > .bold-text {
+    font-size: 35px;
+  }
 }
 /* --------------------------------------------SECTION2------------------------------------- */
 .section2 {
-  width: 1440px;
   display: flex;
   background-color: #ffffff;
   justify-content: center;
   align-items: center;
 }
-.section2 > .container {
+.section2-container {
   width: 768px;
   display: flex;
   flex-direction: row;
-  margin: 100px 336px;
+  margin: 100px 336px 128px 336px;
 }
-.section2 > .container > .title {
+.section2-container > .title {
   width: 35%;
-  font-family: "Poppins", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
   line-height: 38px;
   color: #000000;
 }
-.section2 > .container > .text-container {
+.section2-container > .text-container {
   width: 65%;
 }
-.section2 > .container > .text-container > p {
+.section2-container > .text-container > p {
   margin: 0;
-  font-family: "Poppins";
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
 }
-.section2 > .container > .text-container > .image-container {
+.section2-container > .text-container > .image-container {
   display: flex;
   margin-top: 18px;
 }
@@ -178,7 +371,6 @@ body {
 }
 
 .image-container > .name-container > .name {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
@@ -186,10 +378,444 @@ body {
   color: #000000;
 }
 .image-container > .name-container > .job {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   color: #000000;
+}
+/* --------------------------------------------SECTION3------------------------------------- */
+.section3 {
+  height: 600px;
+  position: relative;
+}
+.section3-container {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section3-container > .text1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.section3-container > .text2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+/* --------------------------------------------SECTION4------------------------------------- */
+.section4 {
+  background-color: #ffffff;
+}
+.section4-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 120px 110px 120px;
+}
+.section4-container > .text1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 13px;
+}
+.section4-container > .text2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 42px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 47px;
+}
+.section4-container > .inner-container {
+  display: flex;
+  flex-direction: row;
+}
+.section4-container > .inner-container > .item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 314px;
+}
+.section4-container > .inner-container > .middle {
+  margin-left: 84px;
+  margin-right: 84px;
+}
+.section4-container > .inner-container > .item-container > .title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
+  margin: 15px 0 10px 0;
+}
+.section4-container > .inner-container > .item-container > .text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #717171;
+}
+/* --------------------------------------------SECTION5-------------------------------------  this section is identical as section3 */
+
+/* --------------------------------------------SECTION6------------------------------------- */
+.section6 {
+  background-color: #000000;
+}
+.section6-container {
+  display: flex;
+  flex-direction: row;
+  margin: 52px 136px;
+  padding: 30px 49px;
+}
+.section6-left-container {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+}
+.section6-left-container > .text1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ece7e4;
+}
+.section6-left-container > .text2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+.section6-left-container > .text3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #ece7e4;
+}
+.section6-right-container {
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.section6-right-container .images {
+  margin: 29px 0 29px 178px;
+}
+.section6-right-container .first {
+  margin-top: 10px;
+}
+.section6-right-container .second {
+  margin-top: 10px;
+}
+.section6-right-container .third {
+  margin-top: 64px;
+}
+.section6-right-container .four {
+  margin-top: 64px;
+}
+/* --------------------------------------------SECTION7------------------------------------- */
+.section7-container {
+  width: 280px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section7-container > .text1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.section7-container > .text2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+/* --------------------------------------------SECTION8------------------------------------- */
+.section8 {
+  background-color: #f7f7f7;
+}
+.section8-container {
+  margin: 114px 136px 100px 136px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section8-container > .text1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 42px;
+  color: #000000;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.section8-container > .text2 {
+  width: 581px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+  margin-bottom: 42px;
+  width: 100%;
+}
+.section8-container > .image-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.section8-image-subcontainer {
+  position: relative;
+}
+.section8-image-subcontainer:hover .text1 {
+  display: block;
+}
+.section8-image-subcontainer:hover .text2 {
+  display: block;
+}
+.section8-image-subcontainer:hover button {
+  display: block;
+}
+.section8-image-subcontainer > .text1 {
+  display: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  left: 10%;
+}
+.section8-image-subcontainer > .text2 {
+  display: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 30px;
+  color: #403e3b;
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 10%;
+}
+.section8-image-subcontainer > button {
+  display: none;
+  background-color: #000000;
+  border-radius: 14px;
+  color: #ffffff;
+  width: 133px;
+  height: 46px;
+  position: absolute;
+  z-index: 1;
+  top: 80%;
+  left: 10%;
+}
+.section8-image-subcontainer > button:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+.section8-image-subcontainer > .images {
+  width: 379px;
+}
+.section8-view {
+  border: 1px solid #000000;
+  margin-top: 35px;
+  color: #000000;
+}
+.section8-view:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+/* --------------------------------------------SECTION9------------------------------------- */
+.section9 {
+  background-color: #ffffff;
+}
+.section9-container {
+  margin: 96px 136px 129px 136px;
+  display: flex;
+}
+.section9-left-container {
+  display: flex;
+  flex-direction: column;
+  width: 34%;
+}
+.section9-left-container > .text1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: #000000;
+  margin-bottom: 14px;
+}
+.section9-left-container > .text2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #000000;
+  width: 358px;
+}
+.section9-left-container > button {
+  border: 1px solid #000000;
+  margin-top: 30px;
+  color: #000000;
+}
+.section9-left-container > button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.section9-right-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  width: 60%;
+  padding-top: 10px;
+}
+.section9-item-container {
+  display: flex;
+  align-items: center;
+}
+.section9-name-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.section9-name-container > .text1 {
+  font-style: normal;
+
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 26px;
+  color: #000000;
+}
+.section9-name-container > .text2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #000000;
+}
+/* --------------------------------------------SECTION10------------------------------------- */
+.section10 {
+  background-color: #cec4bc;
+}
+.section10-container {
+  margin: 100px 136px 118px 136px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section10-left-container {
+  display: flex;
+  flex-direction: column;
+}
+.section10-left-container > .text1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.section10-left-container > .text2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 38px;
+  color: #000000;
+}
+.section10-container > button {
+  border: 1px solid #000000;
+  color: #000000;
+  background-color: transparent;
+  margin-top: 18px;
+}
+.section10-container > button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+/* --------------------------------------------SECTION11------------------------------------- */
+.footer {
+  width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+.footer-left-container {
+  display: flex;
+  flex-direction: column;
+  margin: 60px 0 60px 136px;
+  align-items: flex-start;
+}
+.footer-left-container > .text1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+.footer-logo {
+  margin-left: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+.footerlogo {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+.footerbold {
+  font-size: 26px;
+}
+.footer-right-container {
+  margin: 100px 136px 60px 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 20px;
 }
