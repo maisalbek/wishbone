@@ -1,0 +1,104 @@
+#about {
+  background-color: #ffffff;
+  max-width: 1440px;
+}
+.section2 {
+  display: flex;
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+}
+.section2-container {
+  margin: 100px 0 128px 0;
+  max-width: 768px;
+  display: flex;
+  flex-direction: row;
+}
+.section2-container > .title {
+  width: 35%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: #000000;
+  margin-top: -2px;
+  box-sizing: border-box;
+}
+.section2-container > .text-container {
+  width: 65%;
+  box-sizing: border-box;
+  margin-left: -1px;
+}
+.section2-container > .text-container > p {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+.section2-container > .text-container > .image-container {
+  display: flex;
+  margin-top: 18px;
+}
+.image-container > .name-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.image-container > .name-container > .name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  color: #000000;
+}
+.image-container > .name-container > .job {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #000000;
+}
+@media all and (max-width: 992px) {
+  .section2-container {
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media all and (max-width: 768px) {
+  .section2-container > .title {
+    font-size: 26px;
+    width: 30%;
+  }
+  .section2-container > .text-container {
+    width: 70%;
+  }
+  .section2-container > .text-container > p {
+    font-size: 14px;
+  }
+  .section2-container {
+    margin: 50px;
+  }
+}
+@media all and (max-width: 576px) {
+  .section2-container {
+    flex-direction: column;
+  }
+  .section2-container > .title {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .section2-container > .text-container {
+    width: 100%;
+  }
+}
+@media all and (max-width: 426px) {
+  .section2-container {
+    margin: 50px 25px;
+  }
+}

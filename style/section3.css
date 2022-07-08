@@ -1,0 +1,82 @@
+.section3 {
+  position: relative;
+  font-size: 0;
+}
+.section3 > img {
+  width: 100%;
+}
+.section3-container {
+  width: 280px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section3-container > .text1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.section3-container > .text2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+@media all and (max-width: 1200px) {
+  .section3-container {
+    left: 70%;
+  }
+}
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 992px) {
+  .section3-container {
+    left: 63%;
+    width: 280px;
+  }
+  .section3-container > .text2 {
+    font-size: 15px;
+  }
+}
+@media all and (max-width: 768px) {
+  .section3-container {
+    left: 60%;
+    width: 230px;
+    padding-top: 20px;
+    box-sizing: border-box;
+  }
+  .section3-container > .text2 {
+    font-size: 14px;
+  }
+  .section3-container > .text1 {
+    margin-left: 5px;
+  }
+}
+@media all and (max-width: 576px) {
+  .section3 > img {
+    display: none;
+  }
+  .section3-container > .text1 {
+    margin-left: 0;
+  }
+  .section3-container {
+    width: 300px;
+    height: 100%;
+    position: static;
+    top: 0;
+    left: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+  }
+}

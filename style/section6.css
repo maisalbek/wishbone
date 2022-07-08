@@ -1,0 +1,123 @@
+.section6 {
+  background-color: #000000;
+  width: 1440px;
+  box-sizing: border-box;
+}
+.section6-container {
+  display: flex;
+  flex-direction: row;
+  margin: 52px 136px 42px 136px;
+  padding: 30px 49px;
+  box-sizing: border-box;
+}
+.section6-left-container {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+  margin-top: -7px;
+}
+.section6-left-container > .text1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ece7e4;
+  margin-bottom: -4px;
+}
+.section6-left-container > .text2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+.section6-left-container > .text3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #ece7e4;
+}
+.section6-right-container {
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-top: 10px;
+}
+.section6-right-container .images {
+  margin: 29px 0 29px 178px;
+}
+.section6-right-container .first {
+  margin-top: 10px;
+}
+.section6-right-container .second {
+  margin-top: 10px;
+}
+.section6-right-container .third {
+  margin-top: 64px;
+}
+.section6-right-container .four {
+  margin-top: 64px;
+}
+@media all and (max-width: 1200px) {
+  .section6-right-container .images {
+    margin: 29px 0 29px 128px;
+  }
+  .section6-container {
+    margin: 52px 80px;
+    padding: 30px 30px;
+  }
+}
+@media all and (max-width: 992px) {
+  .section6-right-container .images {
+    margin: 29px 0 29px 80px;
+  }
+  .section6-container {
+    margin: 52px 50px;
+    padding: 30px 0;
+  }
+}
+@media all and (max-width: 768px) {
+  .section6-right-container .images {
+    margin: 29px 0 29px 50px;
+  }
+  .section6-container {
+    margin: 52px 25px;
+    padding: 30px 0;
+  }
+  .section6-right-container {
+    margin-left: 0;
+  }
+}
+@media all and (max-width: 576px) {
+  .section6-container {
+    flex-direction: column;
+  }
+  .section6-left-container {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  .section6-right-container {
+    width: 100%;
+    place-items: center;
+    gap: 30px;
+  }
+  .section6-right-container .images {
+    margin: 0;
+  }
+  .section6-container {
+    margin: 25px 25px;
+    padding: 25px 0;
+  }
+}
+@media all and (max-width: 376px) {
+  .section6-right-container .images {
+    width: 100px;
+  }
+}

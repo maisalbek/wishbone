@@ -1,0 +1,99 @@
+#contact {
+  max-width: 1440px;
+  background-color: #cec4bc;
+}
+.section10 {
+  width: 100%;
+}
+.section10-container {
+  margin: 99px 136px 118px 136px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section10-left-container {
+  display: flex;
+  flex-direction: column;
+}
+.section10-left-container > .text1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: -7px;
+}
+.section10-left-container > .text2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 42px;
+  color: #000000;
+}
+.section10-container > button {
+  border: 1px solid #000000;
+  color: #000000;
+  background-color: transparent;
+  margin-top: 18px;
+  margin-bottom: -7px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.section10-container > button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.section10-container > button:focus {
+  box-shadow: 0 0 0 3px rgba(25, 25, 25, 0.4);
+}
+@media all and (max-width: 1024px) {
+  .section10-container {
+    margin: 100px 80px 118px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media all and (max-width: 992px) {
+  .section10-left-container > .text2 {
+    font-size: 28px;
+  }
+}
+@media all and (max-width: 768px) {
+  .section10-left-container > .text2 {
+    font-size: 28px;
+  }
+  .section10-container {
+    margin: 100px 25px 118px 25px;
+  }
+}
+@media all and (max-width: 626px) {
+  .section10-container {
+    flex-direction: column;
+  }
+}
+@media all and (max-width: 425px) {
+  .section10-container {
+    flex-direction: column;
+  }
+  .section10-left-container > .text2 {
+    font-size: 22px;
+  }
+  .section10-container {
+    margin: 50px 25px 70px 25px;
+  }
+}
+@media all and (max-width: 321px) {
+  .section10-left-container > .text2 {
+    font-size: 19px;
+  }
+  .section10-container {
+    margin: 50px 25px 50px 25px;
+  }
+}
