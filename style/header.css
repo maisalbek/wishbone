@@ -52,6 +52,7 @@
   text-align: center;
   letter-spacing: 0.4px;
   border: none;
+  cursor: pointer;
 }
 .navbar-btn:hover {
   border: 1px solid #000000;
